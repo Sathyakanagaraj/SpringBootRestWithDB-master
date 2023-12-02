@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client List</title>
+</head>
+<body>
+  <h2>List Clients</h2>
+  <a th:href="@{addclient}" class="btn btn-primary">Add Client</a>
+  <table border="1">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Password</th>
+      </tr>
+  </thead>
+      <tbody>
+        <tr th:each="employee:${employees}">
+          <td th:text="${employee.name}"></td>
+          <td th:text="${employee.password}"></td>
+
+      </tbody>
+  </table>
+</body>
+</html>
